@@ -173,7 +173,6 @@ if(WIN32)
     )
 endif()
 
-# Исправленные POST_BUILD команды с кавычками для путей с пробелами
 if(EXISTS ${CMAKE_SOURCE_DIR}/res)
     add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
@@ -192,7 +191,7 @@ if(EXISTS ${GLFW_DLL})
     )
 endif()
 
-# Only attempt to copy compile_commands.json if it exists and generator supports it
+
 if(ENABLE_COMPILE_COMMANDS AND CMAKE_EXPORT_COMPILE_COMMANDS)
     # Only for non-VS generators
     if(NOT CMAKE_GENERATOR MATCHES "Visual Studio")
