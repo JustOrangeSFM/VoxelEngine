@@ -6,6 +6,12 @@ if exist build (
     rmdir /s /q build
 )
 
+if exist build_debug (
+    echo Removing build_debug/
+    rmdir /s /q build_debug
+)
+
+
 if exist bin (
     echo Removing bin/
     rmdir /s /q bin
