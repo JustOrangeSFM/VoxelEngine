@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Windows",
+            "includePath": [
+                "${workspaceFolder}/inc/**",
+                "${workspaceFolder}/external/**",
+                "${workspaceFolder}/external/glad/include",
+                "${workspaceFolder}/external/glfw/include",
+                "${workspaceFolder}/external/glm",
+                "${workspaceFolder}/external/stb",
+                "${workspaceFolder}/external/robin_hood",
+                "${workspaceFolder}/external/KHR",
+                "${workspaceFolder}/external/imgui",
+                "${workspaceFolder}/external/imgui/backends"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "GLAD_GL_IMPLEMENTATION",
+                "_WIN32_WINNT=0x0A00"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++20",
+            "intelliSenseMode": "windows-msvc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

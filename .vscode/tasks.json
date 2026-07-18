@@ -1,0 +1,71 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Configure",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-B", "build",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DENABLE_COMPILE_COMMANDS=ON",
+                "-G", "Ninja"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Настройка проекта через CMake"
+        },
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", "build",
+                "--config", "Debug",
+                "--target", "App"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": ["CMake Configure"],
+            "problemMatcher": ["$msCompile"],
+            "detail": "Сборка в Debug режиме"
+        },
+        {
+            "label": "Build Release",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", "build",
+                "--config", "Release",
+                "--target", "App"
+            ],
+            "group": "build",
+            "dependsOn": ["CMake Configure"],
+            "problemMatcher": ["$msCompile"],
+            "detail": "Сборка в Release режиме"
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", "build",
+                "--target", "clean"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Очистка сборки"
+        },
+        {
+            "label": "Clean All",
+            "type": "shell",
+            "command": "${workspaceFolder}/clean.bat",
+            "args": [],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "Полная очистка"
+        }
+    ]
+}

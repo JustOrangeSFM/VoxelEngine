@@ -1,0 +1,49 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.generator": "Ninja",
+    "cmake.buildToolArgs": [
+        "-j4"
+    ],
+    "cmake.configureOnOpen": true,
+    "cmake.configureArgs": [
+        "-DENABLE_COMPILE_COMMANDS=ON"
+    ],
+    
+    "files.associations": {
+        "*.h": "cpp",
+        "*.hpp": "cpp",
+        "*.glsl": "glsl",
+        "*.vert": "glsl",
+        "*.frag": "glsl",
+        "*.geom": "glsl",
+        "*.comp": "glsl",
+        "*.vs": "glsl",
+        "*.fs": "glsl",
+        "*.gs": "glsl"
+    },
+    
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/inc/**",
+        "${workspaceFolder}/external/**",
+        "${workspaceFolder}/external/glad/include",
+        "${workspaceFolder}/external/glfw/include",
+        "${workspaceFolder}/external/glm",
+        "${workspaceFolder}/external/stb",
+        "${workspaceFolder}/external/robin_hood",
+        "${workspaceFolder}/external/KHR"
+    ],
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    
+    "[glsl]": {
+        "editor.defaultFormatter": "gecko.glsl-lint",
+        "editor.tabSize": 4
+    },
+    "glsllint.validateComments": true,
+    "glsllint.ignoreVendorExtensionErrors": true
+}

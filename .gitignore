@@ -5,3 +5,6 @@ voxel.properties
 saves/
 compile_commands.json
 .cache/
+/build-debug/
+/build-release/
+*.zip
